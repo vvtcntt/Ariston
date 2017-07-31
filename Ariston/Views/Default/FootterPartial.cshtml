@@ -1,0 +1,213 @@
+﻿@model Ariston.Models.tblConfig
+<nav style="width:100%; height:auto; float:left; margin:0px; color:#FFF; font-size:11px">
+    @Html.Raw(ViewBag.resultUrl)
+</nav> 
+<div id="Footer">
+
+    <div id="Tops">
+        <div id="Contents">
+            <div class="Tear_2">
+                <h4>Trụ sở chính</h4>
+                <span class="Name_Company">@Model.Name</span>
+                <span class="Address_Company">Địa chỉ : @Model.Address</span>
+                @if (int.Parse(DateTime.Now.Hour.ToString()) > 0 && int.Parse(DateTime.Now.Hour.ToString()) < 7)
+                {
+                    <span class="Mobile_Company" style="text-decoration:blink; color:#ff6a00">Điện thoại : Vui lòng quay lại website vào 7h30 sáng. Thời gian làm việc từ 7h30-18h hàng ngày</span>
+
+                }
+                else if (int.Parse(DateTime.Now.Hour.ToString()) >= 7 && int.Parse(DateTime.Now.Hour.ToString()) < 19)
+                {
+
+                    <span class="Mobile_Company">Điện thoại :@Model.MobileIN - Hotline : @Model.HotlineIN</span>
+                }
+
+
+                else if (int.Parse(DateTime.Now.Hour.ToString()) >= 19 && int.Parse(DateTime.Now.Hour.ToString()) < 22)
+                {
+                    <span class="Mobile_Company">Điện thoại : @Model.MobileOUT - Hotline :@Model.HotlineOUT</span>
+
+                }
+                else if (int.Parse(DateTime.Now.Hour.ToString()) >= 22 && int.Parse(DateTime.Now.Hour.ToString()) < 25)
+                {
+                    <span class="Mobile_Company" style="text-decoration:blink; color:#ff6a00">Điện thoại : Hết giờ làm việc.Thời gian làm việc từ 7h30-18h hàng ngày</span>
+                }
+                <span class="Email_Company">Email : @Model.Email</span>
+                <h4>Hải Phòng</h4>
+                <span class="Address_Company">Địa chỉ : 554B Nguyễn Văn Linh-Vĩnh Niệm-Lê Chân-HP</span>
+                <span class="Mobile_Company">Điện thoại : 0313 870 327 - 0904 151 746</span>
+                <span class="Email_Company">Email : Phamducvinh_sonha@yahoo.com.vn</span>
+                <h4>TP.Hồ Chí Minh</h4>
+                <span class="Address_Company">Địa chỉ : Ấp Tam Đông 2, xã Thới Tam Thôn, Hóc Môn, TP.HCM.</span>
+                <span class="Mobile_Company">Điện thoại : 08.3602 1397 - 0932 169 727.</span>
+                <span class="Email_Company">Email : Seabig.vn@gmail.com</span>
+
+            </div>
+            <div class="Tear_4">
+                <h4>Về chúng tôi</h4>
+                <a href="/11/gioi-thieu.aspx" title="Giới thiệu" rel="nofollow">Giới thiệu</a>
+                <a href="/ListNew/binh-nong-lanh-Ariston-6.aspx" title="Tin tức mới">Tin tức</a>
+                <a href="/9/Nha-phan-phoi-1.aspx" title="Nhà phân phối">Hệ thống phân phối</a>
+                <a href="/Ban-do" title="Bản đồ">Bản đồ</a>
+                <h4>Sản phẩm chính</h4>
+                @Html.Raw(ViewBag.sanpham)
+                <h4>Các dung tích</h4>
+                @Html.Raw(ViewBag.dungtich)
+            </div>
+            <div class="Tear_4">
+                <h4>Chính sách dịch vụ</h4>
+                @Html.Raw(ViewBag.chinhsach)
+                <a class="dkbct" href="http://www.online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=7279" rel="nofollow"><img src="~/Content/Display/iCon/btc.jpg" alt="Đăng ký bộ công thương" /></a>
+            </div>
+            <div class="Tear_3">
+                <h4>Hỗ trợ khách hàng</h4>
+                <div id="Box_Hotline">
+                    @if (int.Parse(DateTime.Now.Hour.ToString()) > 0 && int.Parse(DateTime.Now.Hour.ToString()) < 7)
+                    {
+                        <a href="#" title="thời gian làm"><span style="font-size: 13px; font-weight: normal">Chưa làm việc</span></a>
+
+                    }
+                    else if (int.Parse(DateTime.Now.Hour.ToString()) >= 7 && int.Parse(DateTime.Now.Hour.ToString()) < 19)
+                    {
+
+                        <a href="#" title="giờ hành chính"><span>@Model.HotlineIN</span></a>
+                    }
+
+
+                    else if (int.Parse(DateTime.Now.Hour.ToString()) >= 19 && int.Parse(DateTime.Now.Hour.ToString()) < 22)
+                    {
+                        <a href="#" title="ngoià giờ hành chính"> <span>@Model.HotlineOUT</span></a>
+
+                    }
+                    else if (int.Parse(DateTime.Now.Hour.ToString()) >= 22 && int.Parse(DateTime.Now.Hour.ToString()) < 25)
+                    {
+                        <a href="#" title="ngoià giờ hành chính"> <span>@Model.HotlineOUT</span></a>
+                    }
+                </div>
+                <div class="Clear"></div>
+                <h4 style="margin-top:3px">Bản đồ chỉ đường</h4>
+                <div id="Box_Maps">
+                    @Html.Raw(ViewBag.maps)
+
+                </div>
+            </div>
+            <div class="Clear"></div>
+            
+        </div>
+        <div id="Authorship" style=" width:100%; height:21px; float:left; margin:2px 0px; text-align:center">
+            <a href="http://www.dmca.com/Protection/Status.aspx?ID=e14ed88c-e4f9-4229-9351-2822382f4d9c" title="DMCA.com Protection Status" class="dmca-badge"> <img src="//images.dmca.com/Badges/dmca_protected_sml_120f.png?ID=e14ed88c-e4f9-4229-9351-2822382f4d9c" alt="DMCA.com Protection Status" /></a> 
+            <a href="https://plus.google.com/@Model.Authorship?rel=author"><img src="~/Content/Display/iCon/GoogleAuthorShip.png" alt="Đăng ký google authorShip" /></a>
+            <div class="Clear"></div>
+        </div>
+    </div>
+
+    <div class="Clear"></div>
+    <div id="Bottom">
+        <div id="Content">
+            <span>
+                Copyright 2015  SEABIG VIET NAM . Allright reserved
+            </span>
+            <div id="Right">
+                <a href="" class="Face"></a>
+                <a href="" class="Google"></a>
+                <a href="" class="Youtube"></a>
+            </div>
+        </div>
+    </div>
+    <div class="Clear"></div>
+</div>
+@if(Request.Browser.IsMobileDevice)
+{
+    
+}
+else
+{
+    @Html.Raw(Model.Content)
+}
+@if (Request.Browser.IsMobileDevice == false)
+{
+    @Html.Raw(Model.CodeChat)
+    
+    <script>
+    try {
+        var Tat_quangcao = localStorage.getItem("Tat_quangcao");
+        if (Tat_quangcao != null) {
+            if ((new Date).getDate() == new Date(parseInt(localStorage.getItem("Tat_quangcao"))).getDate()) {
+                open_motog = false;
+            }
+        }
+    } catch (e) { console.log(e) }
+
+    function Tatquangcao(obj) {
+        $(obj).parent().remove();
+        try {
+
+            $('#Top_Banner').css({ 'height': '32px' });
+            $('#Content_Top_Banner').css({ 'position': 'relative', 'display': 'block' });
+            $('#adw').html();
+
+            localStorage.setItem("Tat_quangcao", (new Date).getTime())
+        } catch (e) { console.log(e); }
+    }
+</script>
+     <style>
+        #adwfooter {
+            width: 100%;
+            height: auto;
+            float: left;
+            margin: 0px;
+            border-bottom: 1px solid #dddddd;
+            position: fixed;
+            bottom: 0px;
+        }
+
+        #Banner_footer {
+            bottom: 0px;
+            z-index: 10;
+            width: 100%;
+            height: auto;
+            float: left;
+        }
+
+        #Content_Banner_Footer {
+            width: 1200px;
+            height: auto;
+            margin: 0px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+            #Content_Banner_Footer span {
+                font-size: 20px;
+                text-align: center;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-color: #333;
+                color: #FFF;
+                cursor: pointer;
+                z-index: 99;
+                line-height: 20px;
+            }
+
+            #Content_Banner_Footer a {
+                float: left;
+                margin: 0px;
+                display: block;
+            }
+    </style>
+    if(ViewBag.Chuoiimg != null && ViewBag.Chuoiimg!="")
+    {
+        <div id="adwfooter">
+        <div id="Banner_footer">
+            <div id="Content_Banner_Footer">
+                <span onclick="Tatquangcao(this)">×</span>
+                
+                @Html.Raw(ViewBag.Chuoiimg)
+            </div>
+        </div>
+    </div>
+    }
+}

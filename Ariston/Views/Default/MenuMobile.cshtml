@@ -1,0 +1,23 @@
+﻿@if (Request.Browser.IsMobileDevice)
+{
+    <div id="page">
+        <div class="header">
+            <a href="#menu"></a>
+            Danh mục sản phẩm
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="/" title="Trang chủ">Trang chủ</a></li>
+                <li>
+                    <a href="/">Danh mục sản phẩm</a>
+                    <ul>
+                        @Html.Raw(ViewBag.chuoimenu)
+                    </ul>
+                </li>
+                <li><a href="/Contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </div>
+} 
+    
+ 

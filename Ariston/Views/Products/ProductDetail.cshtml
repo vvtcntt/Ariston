@@ -1,0 +1,202 @@
+﻿@{
+     Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+
+@model Ariston.Models.tblProduct
+<div id="MainContent">
+    <div class="Root">
+        <div class="Left">
+            @Html.Raw(ViewBag.nUrl)
+        </div>
+        <div class="share">
+            <span>Chia sẻ</span>
+            <a class="share-face" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=@Request.Url.ToString()">&nbsp;</a>
+            <a class="share-mail-2" target="_blank" href="mailto:seabig.vn@gmail.com?Subject=Ariston Website - Tôi quan tâm tới mục này&amp;body=@Request.Url.ToString()">&nbsp;</a>
+            <a class="share-google" target="_blank" href="https://plus.google.com/share?url=@Request.Url.ToString()">&nbsp;</a>
+        </div>
+    </div>
+    <div class="Clear"></div>
+ 
+
+    <div id="Contents">
+        <div id="ProductDetail">
+            <div id="TopProduct">
+
+                <div id="LeftProduct">
+                    <div id="chinhhang"></div>
+                    <img src="@Model.ImageLinkDetail" alt="@Model.Name" title="@Model.Name" />
+                </div>
+                <div id="RightProduct">
+                    <h2>@Model.Name</h2>
+                    <span class="Description">
+                        @Model.Description
+                    </span>
+                    <span class="Price">Giá: @string.Format("{0:#,#}", @Model.Price) đ</span>
+                    <span class="PriceSale">Giá khuyến mại : @string.Format("{0:#,#}", @Model.PriceSale) đ</span>
+                    <span class="pt">Mã sản phẩm : @Model.Code</span>
+                    <span class="pt">Xuất xứ : Chính hãng</span>
+                    <span class="pt">Bảo hành : @Model.Warranty năm</span>
+                    @if(Model.Status==true)
+                    { <span class="pt">Tình trạng : Còn hàng</span>}
+                    else
+                    {
+                        
+                        <span class="pt">Tình trạng : Hết hàng</span>
+                    }
+                   
+                    <div class="Box_Order">
+                        <input type="number" value="1" name="txtOrd" id="txtOrd" class="txtOrd" />
+                        <input type="button" class="btnOrder" id="btnOrder" name="btnOrder" rel="miendatwebPopup" href="#popup_content" onclick="CreateOrder(@Model.id)" />
+                        <input type="text" value="@Model.id" id="idPro" name="idPro" style="opacity:0" />
+                        <input type="text" value="@Model.idCate" id="idCate" name="idCate" style="opacity:0" />
+                    </div>
+                    @{
+                        bool state;
+                        string kiemtra = Model.Sale;
+                        if (kiemtra != null && kiemtra != "")
+                        {
+                            state = true;
+                        }  
+                        else
+                        {
+                            state = false; 
+                        }
+                            
+                        
+                    }
+                    @if(state==true)
+                    {
+                    <div id="Sale">
+                        <span>
+                            @Model.Sale
+                    </span>
+                </div>
+                    }
+                  
+                    <div id="ProductLienquan">
+                         
+                         
+                         @Html.Raw(ViewBag.splq)
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="Parameter">
+                <div class="nVar_1">
+                    <div class="Left_nVar1"><h2>Thông số kỹ thuật @Model.Name</h2></div>
+                    <div class="Right_nVar">
+                        <a href="" title="">Hướng dẫn sử dụng</a>
+                    </div>
+                </div>
+                <div class="Clear"></div>
+                <div class="Content_Parameter">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Mã sản phẩm</td>
+                                <td>@Model.Code</td>
+                            </tr>
+                            <tr>
+                                <td>Tên sản phẩm</td>
+                                <td>@Model.Name</td>
+                            </tr>
+                            <tr>
+                                <td>Bảo hành</td>
+                                <td>@Model.Warranty năm</td>
+                            </tr>
+                             
+                            <tr>
+                                <td>Dung tích (Lít):</td>
+                                <td>@Html.Raw(ViewBag.capa)</td>
+                            </tr>
+                            <tr>
+                                <td>Số người sử dụng:</td>
+                                <td>@Html.Raw(ViewBag.songuoisd)</td>
+                            </tr>
+                            @if (Model.Size != null && Model.Size != "")
+                            {
+                                <tr>
+                                   
+                                        <td>Kích thước (Rộng x Cao x Dài )</td>
+
+
+
+                                    <td>@Model.Size (mm)</td>
+                                </tr>
+                            }
+
+                           @Html.Raw(ViewBag.chuoi)
+                        </tbody>
+                    </table>
+                  @Html.Raw(Model.Parameter)
+                </div>
+                <div class="Clear"></div>
+            </div>
+          @if (ViewBag.resultImages != null && ViewBag.resultImages!="")
+          {
+              <div id="pgwSlideShow">
+                <span class="att">Ảnh thực tế</span>
+                <ul class="pgwSlideshow">
+                   @Html.Raw(ViewBag.resultImages)
+                  
+                     
+                </ul>
+
+            </div>
+          }
+            
+            <div id="Func">
+                <div class="nVar_1">
+                    <div class="Left_nVar1"><h3>Tính năng sản phẩm @Model.Name</h3></div>
+                </div>
+                <div class="Clear"></div>
+                <div class="Content_Func">
+                    @Html.Raw(Model.Content)
+                </div>
+                @{
+                    string chuoi = ViewBag.spk;
+                }
+                @if (chuoi != null && chuoi != "")
+                {
+                    <div class="nVar_1">
+                        <div class="Left_nVar1"><span>Bạn nên tham khảo thêm những sản phẩm dung tích @Html.Raw(ViewBag.cap1) khác</span></div>
+
+                    </div>
+                    <div class="Content_Func1">
+                        @Html.Raw(ViewBag.spk)
+                    </div>
+
+                }
+                
+            </div>
+            <div class="Clear"></div>
+            <div id="Comments">
+                <div class="nVar_1">
+                    <span>Nhận xét đánh giá</span>
+                </div>
+                <div class="Slution">
+                    <div class="Mxh" style="float: left; width: 270px; margin-left: 2px">
+                        <div class="fb-like" data-send="true" data-layout="button_count" data-width="60"
+                             data-show-faces="true">
+                        </div>
+                       
+                        <div id="g" style="float: left; margin: 7px 5px; height: 15px; width: 20px">
+                            <g:plusone size="medium"></g:plusone>
+                        </div>
+                    </div>
+                </div>
+                <div class="Content_Comment">
+                    <div class="fb-comments" data-href="@Request.Url.ToString()" data-num-posts="20" style="width:100%; float:left; margin:0px" width="100%" ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="Clear"></div>
+</div>
+<script src="~/Content/Display/Script/pgwslideshow.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.pgwSlideshow').pgwSlideshow();
+});
+</script>

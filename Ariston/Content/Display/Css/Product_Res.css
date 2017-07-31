@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 768px) {
+	#ProductDetail #TopProduct #RightProduct #ProductLienquan .Tear_5{ width:30%}
+}
+@media screen and (max-width: 488px) {
+	#ProductDetail #TopProduct #LeftProduct{ width:100%}
+	#ProductDetail #TopProduct #RightProduct{ width:100%}
+	#ProductDetail #TopProduct #RightProduct h1{font-size: 18px;}
+	#ProductDetail #TopProduct #RightProduct #ProductLienquan{ display:none}
+	#ProductDetail #Parameter .nVar_1 .Right_nVar a{ display:none}
+	#ProductDetail #Func .nVar_1 .Left_nVar1{ width:100%;background:none}
+	#ProductDetail #Parameter .nVar_1 .Left_nVar1{ width:100%;background:none}
+}

@@ -1,0 +1,59 @@
+﻿@{
+
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+<script type="text/javascript">
+    $(function () {
+
+
+        $(".Arrange").change(function () {
+            //your code
+
+            var sx = $(".Arrange").val();
+
+            //alert(searchString);
+
+            $.post("/Default/Index", { "sx": sx },
+                function (data) {
+                    $('#ajaxnhan').html(data);
+                });
+
+            //
+        });
+
+
+
+    });
+
+</script>
+<div class="Clear"></div>
+<div id="MainContent">
+    <div class="Root">
+        <div class="Left">
+            @Html.Raw(ViewBag.nUrl)
+        </div>
+        <div class="share">
+            <span>Chia sẻ</span>
+            <a class="share-face" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=@Request.Url.ToString()">&nbsp;</a>
+            <a class="share-mail-2" target="_blank" href="mailto:seabig.vn@gmail.com?Subject=Ariston Website - Tôi quan tâm tới mục này&amp;body=@Request.Url.ToString()">&nbsp;</a>
+            <a class="share-google" target="_blank" href="https://plus.google.com/share?url=@Request.Url.ToString()">&nbsp;</a>
+        </div>
+    </div>
+    @Html.Raw(ViewBag.json)
+
+
+    <div class="Clear"></div>
+    <div id="Contents">
+        @*@{Html.RenderAction("LeftContent", "Left");}
+        <div id="RightContent">*@
+            @Html.Raw(ViewBag.chuoi)
+            <div class="Clear"></div>
+            <div class="NoteContent">@Html.Raw(ViewBag.Content)</div>
+        @*</div>*@
+    </div>
+    <div class="Clear"></div>
+</div>
+
+
+
+

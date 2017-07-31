@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Ariston.Models.tblNew>
+<div id="Box_News">
+    <div class="nVar_BoxNews">
+
+        <span>Tin tức mới</span>
+    </div>
+    <div class="Content_Boxnews">
+        @foreach (var item in Model)
+        {
+            if (item.ViewHomes == true)
+            {
+                <h4><a href="/News/@item.Tag-@item.id@Html.Raw(".aspx")" title="@item.Name"><span class="rel"></span>@item.Name</a></h4>
+
+            }
+            else
+            {
+                <h4>   <a href="/News/@item.Tag-@item.id@Html.Raw(".aspx")" title="@item.Name"><span class="blue"></span>@item.Name</a></h4>
+
+            }
+
+        }
+        
+        
+    </div>
+
+
+</div>

@@ -1,0 +1,15 @@
+﻿@model Ariston.Models.tblVideo
+<div id="NewHomes">
+    <div id="Video">
+        <span class="mota">Video Ariston</span>
+        <div id="Content_Video">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/@Model.Code" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div id="NewsHome">
+        <span class="mota">Tin tức về Ariston</span>
+        <div class="Content_Boxnews">
+@Html.Raw(ViewBag.chuoi)            
+        </div>
+    </div>
+</div>

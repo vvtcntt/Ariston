@@ -1,0 +1,76 @@
+﻿@model Ariston.Models.tblConfig
+@Html.Raw(ViewBag.h1)
+<div id="Top">
+    <div id="Content">
+        <div id="Banner">
+            <div id="Top_Banner">
+                <div id="LeftBanner">
+                    <a href="/" title="Bình nóng lạnh Ariston"><img src="@Model.Logo" alt="Logo Ariston" /></a>
+                </div>
+                <div id="RightBanner">
+                    <div class="box_Leng">
+                        <a href="" title="Ngôn ngữ"><span></span></a>
+                    </div>
+
+                </div>
+            </div>
+            <div id="Bottom_Banner">
+                <div id="Box_tep1">
+                    <a href="/Contact" title="Liên hệ" rel="nofollow">Liên hệ &iota;</a>
+                    <a href="/" title="Giới thiệu">Giới thiệu &iota;</a>
+                    <a href="/ListNew/binh-nong-lanh-Ariston-6.aspx" title="Tin tức" rel="nofollow">Tin tức &iota;</a>
+                    <a href="/9/Nha-phan-phoi-1.aspx" title="HỆ thóng phân phối" rel="nofollow">Hệ thống phân phối </a>
+                </div>
+                <div id="Box_tep2">
+                    <a href="#" title="Hotline">
+                        Số điện thoại hỗ trợ mua hàng :<span>
+                            @if (int.Parse(DateTime.Now.Hour.ToString()) > 0 && int.Parse(DateTime.Now.Hour.ToString()) < 7)
+                            {
+                                @Model.HotlineOUT
+
+                            }
+                            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 7 && int.Parse(DateTime.Now.Hour.ToString()) < 19)
+                            {
+                                @Model.HotlineIN                        
+                            }
+                            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 19 && int.Parse(DateTime.Now.Hour.ToString()) < 22)
+                            {
+                                @Model.HotlineOUT
+                            }
+                            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 22 && int.Parse(DateTime.Now.Hour.ToString()) < 25)
+                            {
+                                @Model.HotlineOUT
+                            }
+                        </span>
+                    </a>
+                </div>
+                <div id="Box_tep3">
+                    <a href="" title="">Tìm trung tâm bảo hành gần nhất</a>
+                </div>
+                <div id="Box_tep4">
+                    @using (Html.BeginForm("Search", "Default", FormMethod.Post))
+                    {
+                        <input type="text" placeholder="Nhập tìm kiếm" id="txtSearch" name="txtSearch" class="txtSearch" />
+                        <button type="submit" name="btnSearch" id="btnSearch" class="btnSearch"></button>
+                    }
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="Menu"><div id="Content_Menu">
+    <ul class="ul1">
+        <li class="li1">
+            <a href="/" title="Bình nóng lạnh Ariston">Ariston</a>
+
+        </li>
+        @Html.Raw(ViewBag.Menu)
+
+        <li class="li1">
+            <a href="/Contact" title="Liên hệ" rel="nofollow">Hỗ trơ khách hàng</a>
+        </li>
+    </ul></div>
+     
+   
+</div>
+</div>

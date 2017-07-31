@@ -1,0 +1,62 @@
+﻿@{
+     Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@using PagedList.Mvc;
+@model PagedList.IPagedList<Ariston.Models.tblNew>
+       <div id="MainContent">
+    <div class="Root">
+        <div class="Left">
+           @Html.Raw(ViewBag.nUrl)
+        </div>
+        <div class="share">
+            <span>Chia sẻ</span>
+            <a class="share-face" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=@Request.Url.ToString()">&nbsp;</a>
+            <a class="share-mail-2" target="_blank" href="mailto:seabig.vn@gmail.com?Subject=Ariston Website - Tôi quan tâm tới mục này&amp;body=@Request.Url.ToString()">&nbsp;</a>
+            <a class="share-google" target="_blank" href="https://plus.google.com/share?url=@Request.Url.ToString()">&nbsp;</a>
+        </div>
+    </div>
+    <div class="Clear"></div>
+    <div id="Contents">
+        <div id="LeftContent">
+             @{Html.RenderAction("LeftNewsPartail", "Left");}
+            <div id="box_Download">
+                <a href="" title="">Hướng dẫn sử dụng</a>
+            </div>
+
+            @{Html.RenderAction("SupportPartial", "Left");}
+            @{Html.RenderAction("UrlPartial", "Left");}
+        </div>
+        <div id="RightContent">
+            <div class="Product">
+                <div class="nVar">
+                    <div class="Left">
+                        <h1>
+                            @Html.Raw(ViewBag.Name)
+                            Tin tức mới
+                        </h1>
+                    </div>
+
+                </div>
+@using (Html.BeginForm("Command", "NewsDisplay", FormMethod.Post))
+{
+                <div id="Content">
+                    @foreach( var item in Model)
+                    {
+                    <div class="Tear_News">
+                        <a href="/News/@item.Tag-@item.id@Html.Raw(".aspx")" title=""><img src="@item.Images" alt="@item.Name" /></a>
+                        <a href="/News/@item.Tag-@item.id@Html.Raw(".aspx")" title="" class="Namenews">@item.Name <span>Date : @item.DateCreate</span></a>
+                        <span class="HeadShort"> @item.Description</span>
+                    </div> 
+                    }
+                </div>
+                @Html.PagedListPager(Model, page => Url.Action("ListNews", new { page = page, sortOrder = ViewBag.CurrentSortOrder, sortName = ViewBag.CurrentSortName, sortLevel = ViewBag.CurrentSortLevel }), (PagedListRenderOptions)ViewBag.ship)
+
+}
+            </div>
+
+        </div>
+    </div>
+    <div class="Clear"></div>
+</div>
+
+@Html.Raw(ViewBag.coppy)

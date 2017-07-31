@@ -1,0 +1,132 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+#ProductDetail{ width:100%; height:auto; float:
+left; margin:0px}
+#ProductDetail #TopProduct{ width:100%; height:auto; float:
+left; margin:0px}
+#ProductDetail #TopProduct #LeftProduct{ width:50%; height:auto; float:
+left; margin:0px; position:relative}
+#ProductDetail #TopProduct #LeftProduct #chinhhang{ width:100px; height:100px; position:absolute; right:2px; margin:5px; background:url(../iCon/Chinh-hang.gif) no-repeat transparent }
+#ProductDetail #TopProduct #LeftProduct img{  height:auto; max-width:95%; margin:5px auto; display:block}
+#ProductDetail #TopProduct #RightProduct{ width:50%; height:auto; float:
+left; margin:0px}
+#ProductDetail #TopProduct #RightProduct h2{font-size: 28px;
+color: #ff0038;
+text-transform: uppercase;
+font-weight:normal; margin:3px 5px; font-size:20px}
+#ProductDetail #TopProduct #RightProduct .Description{ color:#575757; margin:10px 5px 10px 5px; display:block}
+#ProductDetail #TopProduct #RightProduct .pt{ margin:6px 5px; display:block; color:#575757}
+#ProductDetail #TopProduct #RightProduct .Price{ color:#575757; margin:10px 5px 2px 5px; display:block}
+#ProductDetail #TopProduct #RightProduct .PriceSale{ color:#ff0038; margin:5px 5px 10px 5px; display:block; font-size:14px; font-weight:bold}
+
+#ProductDetail #TopProduct #RightProduct .Box_Order{ height:31px; width:100%; float:left; margin:2px 0px}
+#ProductDetail #TopProduct #RightProduct .Box_Order .txtOrd{ width:40px; float:left; height:19px; border:1px solid #cacaca; margin:4px 5px 0px 15px; text-align:center}
+#ProductDetail #TopProduct #RightProduct .Box_Order .btnOrder{ width:109px; height:100%; border:none; background:url(../iCon/icon_dathang.png) no-repeat left center scroll transparent; float:left}
+#ProductDetail #TopProduct #RightProduct #Sale{ width:95%; height:auto; float:left; margin:5px; background:url(../iCon/iconChuY.png) no-repeat  left center scroll  #fef3df; min-height:20px;border: 1px solid #F2E7D2; background-position:5px}
+#ProductDetail #TopProduct #RightProduct #Sale span{ color:#575757; margin:5px 5px 5px 30px; display:block}
+#ProductDetail #TopProduct #RightProduct #ProductLienquan{ width:95%;  height:auto; float:left; margin:1px 5px}
+#ProductDetail #TopProduct #RightProduct #ProductLienquan .Tear_5{ width:23%; height:auto; float:left; margin:2px;border: 1px solid #f8f8f7; position:relative }
+#ProductDetail #TopProduct #RightProduct #ProductLienquan .Tear_5 img{width:95%; height:auto; float:left; margin:0px auto; display:block}
+#ProductDetail #TopProduct #RightProduct #ProductLienquan .Tear_5 a{ font-size:11px; color:#868686; text-align:center; margin:2px 3px; display:block}
+#ProductDetail #TopProduct #RightProduct #ProductLienquan .Tear_5 h3{font-size:12px; font-weight:normal; margin:0px}
+#ProductDetail #Parameter { width:100%; height:auto; float:left; margin:10px 0px 2px 0px}
+#ProductDetail #Parameter .nVar_1{width:100%; height:35px; float:left; margin:0px; background:#7b7778; line-height:35px}
+#ProductDetail #Parameter .nVar_1 .Left_nVar1{  height:100%; background:#c1022c; float:left; margin:0px}
+#ProductDetail #Parameter .nVar_1 .Left_nVar1 span{ color:#FFF; height: 35px;
+line-height: 35px;
+text-transform:uppercase;
+text-align:center; display:block}
+#ProductDetail #Parameter .nVar_1 .Right_nVar a{
+	
+float: right;
+background-color: transparent;
+background-image:url(../iCon/icon.png);
+background-position: right -637px;
+background-repeat: no-repeat;
+margin-right: 14px;
+padding-right: 32px;color: #fff;
+text-transform: uppercase;
+}
+#ProductDetail #Parameter .Content_Parameter{ width:100%; height:auto; margin:12px 0px ; text-align:justify; overflow:hidden; line-height:20px}
+#ProductDetail #Parameter .Content_Parameter img{ max-width:100% !important; height:auto !important ; margin:0px auto; display:block}
+
+#ProductDetail #Func { width:100%; height:auto; float:left; margin:10px 0px 2px 0px;}
+#ProductDetail #Func .nVar_1{width:100%; height:35px; float:left; margin:0px; background:#7b7778; line-height:35px}
+#ProductDetail #Func .nVar_1 .Left_nVar1{ width:auto; height:100%; background:#c1022c; float:left; margin:0px}
+#ProductDetail #Func .nVar_1 .Left_nVar1 span{ color:#FFF; height: 35px;
+line-height: 35px;
+text-transform:uppercase;
+text-align:center; display:block; padding:0px 10px}
+
+#ProductDetail #Parameter .nVar_1 .Left_nVar1 h2{ color:#FFF;
+text-transform:uppercase;
+text-align:center; display:block; padding:0px 10px; font-weight:normal; margin:0px; font-size:13px}
+
+#ProductDetail #Func .nVar_1 .Left_nVar1 h3{ color:#FFF; 
+text-transform:uppercase;
+text-align:center; display:block; padding:0px 10px; font-weight:normal ; margin:0px}
+#ProductDetail #Func .Content_Func   h3{font-size: 16px;
+  color: #ff0038;
+  text-transform:uppercase; font-weight:normal; margin:15px 2px}
+  #ProductDetail #Func .Content_Func   h2{font-size: 20px;
+  color: #ff0038;
+  text-transform:uppercase; font-family:UTMSwissCondensedBold; font-weight:normal; margin:8px 2px}
+  
+ #ProductDetail #Func .Content_Func h3::before{ content: '❖ ';}
+#ProductDetail #Func .Content_Func{ width:100%; height:auto; margin:12px 0px ; text-align:justify; overflow:hidden; line-height:20px}
+#ProductDetail #Func .Content_Func .Left1{ width:50%; height:auto; float:left}
+#ProductDetail #Func .Content_Func .Right1{ width:50%; height:auto; float:left}
+#ProductDetail #Func .Content_Func table{ width:100% !important; height:auto; border:none}
+
+#Comments{ width:100%; height:auto; float:left; margin:10px 0px}
+#Comments .nVar_1{width:100%; height:35px; float:left; margin:0px;   line-height:35px; background:url(../iCon/comments-icon.png) no-repeat left center; background-position:5px; }
+#Comments .nVar_1 span{ color:#5f5f5f;  
+text-transform:uppercase;
+  display:block;
+  margin:auto auto auto 50px}
+#Comments  .Content_Comment{ width:100%; height:auto; margin:10px 0px; float:left}
+#Comments  .Slution{ width:100%; height:auto; margin:5px 0px; float:left}
+
+.Top_Tear5{ max-height:75%; float:left; margin:0px}
+
+/*#ProductDetail #Parameter table{margin-bottom: 48px;text-align: left;}
+#ProductDetail #Parameter tr:first-child th{background-color: #9c9c9c;font-weight: bold;font-size: 16px;color: #fff;padding: 11px 0px 5px 140px;}
+#ProductDetail #Parameter tr th:first-child{width: 450px;padding-left: 118px}
+#ProductDetail #Parameter tr td{padding: 7px 0px 4px 0px;border-bottom: 1px solid #ececec;}
+#ProductDetail #Parameter tr td:first-child{width: 400px;padding-left: 118px;padding-right: 50px;}
+#ProductDetail #Parameter tr td:first-child p{text-align: right;}
+#ProductDetail #Parameter tr.even td{background-color: #fff;border:none;text-align: left;}
+#ProductDetail #Parameter tr.odd td{background-color: #f0f0f0;border:none;text-align: left;}
+#ProductDetail #Parameter td p{display: inline-block;width: 105px;*zoom:1;*display: inline;}
+#ProductDetail #Parameter  td p b{font-style: 16px;}
+#ProductDetail #Parameter tr td:first-child p{float: right;text-align: right;width: 250px;}
+#ProductDetail #Parameter .note{font-style: italic;margin-top:-40px;text-align: left;margin-left: 115px;margin-bottom: 45px;}
+
+#ProductDetail #Parameter img{display:inline-block;vertical-align: middle;}
+#ProductDetail #Parameter td div img{display: inline-block;vertical-align: top;margin-right: 120px;}
+#ProductDetail #Parameter td div ul{display: inline-block;vertical-align: top;list-style: decimal;}
+#ProductDetail #Parameter td div ul li{list-style: decimal;}
+#ProductDetail #Parameter .col-1{margin-right: 115px;}
+#ProductDetail #Parameter .col-1, #ProductDetail #Parameter .col-2{display: inline-block;vertical-align: top;margin-top: 12px;margin-bottom: 20px;}
+#ProductDetail #Parameter .col-1 img, #ProductDetail #Parameter .col-2 img{display: block;margin-top: 8px;margin-right: 0px;}
+#ProductDetail #Parameter-sun .odd{font-size: 16px}
+#ProductDetail #Parameter-sun .even td{padding-top: 17px;padding-bottom: 28px;}*/
+
+
+#ProductDetail #Parameter table{ width:100%; height:auto; float:left; border-top:1px solid #f1efef; margin:0px 0px 15px 0px}
+#ProductDetail #Parameter table tr:nth-child(2n){ background-color:#f5f5f5}
+ 
+#ProductDetail #Parameter table tr td{ border-right:1px solid #f1efef;  font-size:13px ; padding:5px
+}
+#ProductDetail #Parameter table tr td h3{margin:0px; font-weight:normal; font-size:13px}
+#ProductDetail #Parametertable tr td a{display:block; margin: 0px 0px}
+#ProductDetail #Parametertable tr td:first-child{text-align:center;line-height:26px;text-indent:15px; }
+#ProductDetail #Parameter table tr td:last-child{padding:0px 10px; line-height:18px;width:58%}
+#ProductDetail #Parameter table tr:last-child{ border-bottom:1px solid #f1efef;width:38%}
+.NoteContent{width:100%; height:auto; margin:10px 0px; float:left; font-size:12px}
+table.Ariston{ width:100% !important; height:auto; border:none; background:#f5f5f5; border:1px dashed #d6d6d6 }
+table.Ariston tr { border:none}
+table.Ariston tr td{  width:100%;height:auto; float:left; border:none ; padding:5px 0px;color:#3e3e3e; font-size:13px}
+table.Ariston tr td img{margin:5px 10px 10px 0px !important; float:left}
+ 

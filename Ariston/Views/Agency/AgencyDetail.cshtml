@@ -1,0 +1,72 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDefault.cshtml";
+}
+@model Ariston.Models.tblAgency
+<div id="MainContent">
+    <div class="Root">
+        <div class="Left">
+            @Html.Raw(ViewBag.nUrl)
+        </div>
+        <div class="share">
+            <span>Chia sẻ</span>
+            <a class="share-face" target="_blank" href="">&nbsp;</a>
+            <a class="share-mail-2" target="_blank" href="mailto:info@Ariston.com.vn?Subject=Ariston Website - Tôi quan tâm tới mục này&amp;body=Ariston.com.vn/binh-nuoc-nong-truc-tiep/c/2">&nbsp;</a>
+            <a class="share-google" target="_blank" href="https://plus.google.com/share?url=Ariston.com.vn/binh-nuoc-nong-truc-tiep/c/2">&nbsp;</a>
+        </div>
+    </div>
+    <div class="Clear"></div>
+    <div id="Contents">
+        <div id="LeftContent">
+            @{Html.RenderAction("LeftNewsPartail", "Left");}
+            <div id="box_Download">
+                <a href="" title="">Hướng dẫn sử dụng</a>
+            </div>
+
+            @{Html.RenderAction("SupportPartial", "Left");}
+            @{Html.RenderAction("UrlPartial", "Left");}
+
+
+        </div>
+        <div id="RightContent">
+            <div id="New_Detail">
+                <h1>@Model.Name</h1>
+                <span class="Date">Viết ngày : @Model.DateCreate</span>
+                <div class="Slution"></div>
+                <div class="DescriptionNews">
+                    @Html.Raw(@Model.Description)
+                </div>
+                <div class="Tintuclienquan">
+                    @Html.Raw(ViewBag.chuoinew)
+
+                </div>
+                <div class="Contentnews">
+
+                    @Html.Raw(@Model.Content)
+                </div>
+                <div id="Comments">
+                    <div class="nVar_1">
+                        <span>Nhận xét đánh giá</span>
+                    </div>
+                    <div class="Slution">
+                        <div class="Mxh" style="float: left; width: 270px; margin-left: 2px">
+                            <div class="fb-like" data-send="true" data-layout="button_count" data-width="60"
+                                 data-show-faces="true">
+                            </div>
+                           
+                            <div id="g" style="float: left; margin: 7px 5px; height: 15px; width: 20px">
+                                <g:plusone size="medium"></g:plusone>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Content_Comment">
+                        <div class="fb-comments" data-href="@Request.Url.ToString()" data-num-posts="20" style="width:100%; float:left; margin:0px" width="100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Clear"></div>
+
+</div>
+<div class="Clear"></div>
+</div>

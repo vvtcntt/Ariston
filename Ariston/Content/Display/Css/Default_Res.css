@@ -1,0 +1,127 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+@media screen and (max-width: 768px) {
+#Top #Content{ width:100%}
+#Top #Content #Banner{ width:100%; height:auto}
+#Top #Content #Banner #LeftBanner{ width:auto; height:100%}
+#Top #Content #Banner #RightBanner{ float:right; width:50% !important;background-size:contain}
+#Top   #Menu ul li a {
+font-size: 12px;
+padding: 2px 12px !important;
+
+}
+.Tear_Pri{width:100%}
+#slideshow{ width:100% !important}
+#slideshow .container{ width:100% !important}
+#Content_Menu{ width:100%}
+#MainContent{ width:100%}
+#Contents #LeftContent{ display:none}
+#Content_slide{ width:100%; height:317px; margin:0px auto; position:relative}
+#MainContent #RightContent{ width:auto !important; float:right; margin:opx; padding:0px}
+.nVar{ width:auto }
+#MainContent #RightContent .Product{ width:auto ; margin:opx; padding:0px}
+#MainContent #RightContent .Product .Content{ width:auto }
+.Tear_1{ width:31.1%}
+#Footer #Tops #Contents{ width:100%}
+#Footer #Tops .Tear_4{ width:150px}
+#Footer #Tops .Tear_2{ float:left; margin-left:15px}
+#Footer #Bottom #Content{ width:auto}
+#Top #Content #Menu ul li.li1 .ul2{ width:auto !important}
+#ProductDetail #Func .Content_Func table tr { border:none}
+#ProductDetail #Func .Content_Func table tr td{ width:99% !important; height:auto; float:left; border:none; font-size:13px}
+#ProductDetail #Func .Content_Func table tr td img{ margin:2px auto !important ; display:block}
+.box_Leng{ display:none}
+#Top #Content #Banner #Bottom_Banner{ height:auto}
+
+#Box_tep1{  width:50%;   :}	
+#Box_tep1 a{ line-height:20px}
+#Box_tep2{  width:50%; float:right }						  
+#Box_tep2 a{ font-size:12px !important; line-height:20px; color:#616262; text-align:right !important; display:block}
+#Box_tep2 span{ font-size:14px}
+#Box_tep3{ width:216px}						  
+#Box_tep4{ margin:0px auto ; }
+ #Footer #Tops .Tear_3{display:none}
+#Top #Menu ul li.li1 a{ font-size:11px;   } 
+.theme-default .nivoSlider img{ width:auto !important; height:100% !important; float:left}
+#NewHomes #Video{width:100%}
+#NewsHome{width:100%}
+}
+@media screen and (max-width: 655px) {
+	#Top #Content #Banner #RightBanner{display:none}
+ 		#Top #Content #Banner{ height:auto}
+ 		 #Top #Content #Banner #LeftBanner{ width:100%; height:100%}
+	#Top #Content #Banner #LeftBanner a{ display:table-cell; vertical-align:middle; text-align:center}
+  	.share{ display:none}
+	#Footer #Tops .Tear_4{ width:200px}
+    #Comments .Content_Comment{ overflow:hidden; width:98%}
+	}
+@media screen and (max-width: 488px) {
+	body { width:100%; padding:0; margin:0}
+	#Top{ width:100%; margin:0px auto; padding:0 }
+	#Top #Content{ width:100%; height:auto; margin:0px; padding:0px !important}
+	#Top #Content #Banner{ height:auto !important}
+	#Top #Content #Banner{ width:100%; height:auto; margin-top:5px}
+	#Top #Content #Banner #LeftBanner{ width:100%; height:100%}
+	#Top #Content #Banner #LeftBanner a{  text-align:center; margin-top:5px !important}
+	#Top #Content #Banner #RightBanner{ width:100%; height:auto}
+ 	#Top  #Menu{ display:none}
+	#Top   #Menu ul li{ float:none ; text-align:center !important; width:100%}
+	#Top  #Menu ul li a{ text-align:center; font-size:12px; padding:0px 1px !important; text-transform:none !important}
+	#Top   #Menu ul li.li1:hover .ul2{display:none}
+	#Slide{ display:none}
+		#Top  #Menu ul li a:last-child{margin-bottom:5px; display:block}
+		#MainContent{ width:100%}
+		.Root{margin-bottom: 5px}
+		.Root .Left a{ line-height:15px}
+		.share{ display:none}
+			 #Contents #LeftContent{ display:none}			  
+		#MainContent #RightContent .Product  .nVar .Right .Arrange{ display:none}
+		#MainContent #RightContent .Product .Content .Tear_1{ width:48%; height:auto !auto}
+		#MainContent #RightContent .Product .Content .Tear_1 .img{ height:120px}
+		  #Footer #Tops .Tear_2{ width:100%; margin-left:0px; padding:0px}
+		   #Footer #Tops .Tear_4{ display:none}
+		   #Footer #Tops .Tear_2 h4{ text-align:center}
+		     #Footer #Tops .Tear_3 h4{ text-align:center}
+		   #Footer #Tops .Tear_3{ width:100%; margin:0px !important; padding:0px; overflow:hidden; display:none}
+		    #Footer #Bottom #Content{ width:100%; padding:0px; margin:0px}
+		   #Footer #Bottom #Content #Right{ display:none} 
+		    .dropdown{ float:none; margin:10px auto; display:block ; border:none; }
+			#Footer #Top .Tear_4 a{ color:#999999; font-size:12px; margin:5px 3px; display:block}
+            #ProductDetail #Func .Content_Func table tr { border:none}
+            #ProductDetail #Func .Content_Func table tr td{ width:99% !important; height:auto; float:left; border:none}
+                #ProductDetail #Func .Content_Func table tr td h3 {
+                    font-size: 16px !important;
+                }
+                              #ProductDetail #Func .Content_Func table tr td img{ margin:2px auto !important ; display:block; }
+			#Top #Content #Banner  #Bottom_Banner{ height:auto}				  
+#Box_tep1{  width:100%; margin:0px auto !important; float:none; text-align:center; line-height:}	
+#Box_tep1 a{ line-height:20px}
+#Box_tep2{  width:100%;margin:0px auto !important; float:none}						  
+#Box_tep2 a{ font-size:12px !important; line-height:20px; color:#616262; text-align:center !important; display:block}
+#Box_tep2 span{ font-size:14px}
+#Box_tep3{  width:80%; margin:5px auto !important; float:none}						  
+#Box_tep4{ margin:10px auto 2px auto !important; float:none;   }	
+#page{ display:block}
+.Tear_Pri{height:auto}
+.Tear_Pri .Content_tearPri .Box_Info{width:100%}
+.Tear_Pri .Content_tearPri .Box_Image{width:100%}
+.Product  .nVar .Right{display:none}
+.Tear_1{width:47%; height:250px}
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 250px) {
+    .dropdown{ float:none; margin:10px auto; display:block ; border:none; width:auto }
+    #MainContent #RightContent .Product .Content .Tear_1{ width:100%; margin:0px; padding:0px}
+    #Top #Content #Banner #RightBanner #Right #Right_Bottom{ display:none}
+    #MainContent #RightContent .Product .nVar .Left h1{ font-size:11px !important;}
+
+}
