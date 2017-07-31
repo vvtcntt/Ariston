@@ -175,8 +175,17 @@ namespace Ariston.Controllers.Display.Products
              {
                  resultImage+= "<li><img src=\""+listImages[i].Images+"\" alt=\""+product.Name+"\"></li>";
              }
-             ViewBag.resultImages = resultImage;
-                 return View(product);
+             ViewBag.resultImages = resultImage; string address = product.Address.ToString();
+
+            string resultAddress = "";
+            if (address != null && address != "")
+            {
+                int idaddress = int.Parse(address);
+                if (db.tblAddresses.FirstOrDefault(p => p.id == idaddress) != null)
+                    resultAddress = db.tblAddresses.FirstOrDefault(p => p.id == idaddress).Name;
+            }
+            ViewBag.address = resultAddress;
+            return View(product);
         }
         public ActionResult Command(FormCollection collection,string tag)
         {

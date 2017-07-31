@@ -16,7 +16,7 @@ namespace Ariston.Models
         {
         }
 
-        public DbSet<ProductConnect> ProductConnects { get; set; }
+        public DbSet<tblAddress> tblAddresses { get; set; }
         public DbSet<tblAgency> tblAgencies { get; set; }
         public DbSet<tblBank> tblBanks { get; set; }
         public DbSet<tblCapacity> tblCapacities { get; set; }
@@ -67,7 +67,7 @@ namespace Ariston.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new ProductConnectMap());
+            modelBuilder.Configurations.Add(new tblAddressMap());
             modelBuilder.Configurations.Add(new tblAgencyMap());
             modelBuilder.Configurations.Add(new tblBankMap());
             modelBuilder.Configurations.Add(new tblCapacityMap());

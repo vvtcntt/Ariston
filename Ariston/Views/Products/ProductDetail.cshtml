@@ -34,8 +34,13 @@
                     <span class="Price">Giá: @string.Format("{0:#,#}", @Model.Price) đ</span>
                     <span class="PriceSale">Giá khuyến mại : @string.Format("{0:#,#}", @Model.PriceSale) đ</span>
                     <span class="pt">Mã sản phẩm : @Model.Code</span>
-                    <span class="pt">Xuất xứ : Chính hãng</span>
-                    <span class="pt">Bảo hành : @Model.Warranty năm</span>
+                    @if (ViewBag.address != null && ViewBag.address != "")
+                    {
+                        <span class="pt">Xuất xứ : @ViewBag.address</span>
+                    }
+                    else
+                    {  <span class="pt">Xuất xứ : Liên hệ</span>}
+                     <span class="pt">Bảo hành : @Model.Warranty năm</span>
                     @if(Model.Status==true)
                     { <span class="pt">Tình trạng : Còn hàng</span>}
                     else
