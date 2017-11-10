@@ -23,24 +23,10 @@
                 </div>
                 <div id="Box_tep2">
                     <a href="#" title="Hotline">
-                        Số điện thoại hỗ trợ mua hàng :<span>
-                            @if (int.Parse(DateTime.Now.Hour.ToString()) > 0 && int.Parse(DateTime.Now.Hour.ToString()) < 7)
-                            {
-                                @Model.HotlineOUT
-
-                            }
-                            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 7 && int.Parse(DateTime.Now.Hour.ToString()) < 19)
-                            {
-                                @Model.HotlineIN                        
-                            }
-                            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 19 && int.Parse(DateTime.Now.Hour.ToString()) < 22)
-                            {
-                                @Model.HotlineOUT
-                            }
-                            else if (int.Parse(DateTime.Now.Hour.ToString()) >= 22 && int.Parse(DateTime.Now.Hour.ToString()) < 25)
-                            {
-                                @Model.HotlineOUT
-                            }
+                        Hotline :<span>
+                            
+                                @Model.HotlineIN   - @Model.HotlineOUT                     
+                           
                         </span>
                     </a>
                 </div>

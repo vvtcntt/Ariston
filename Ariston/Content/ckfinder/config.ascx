@@ -31,7 +31,7 @@
 		LicenseKey = "";
 
 		// The base URL used to reach files in CKFinder through the browser.
-		BaseUrl = "/Images/";
+        BaseUrl = "~/Images/";
 
 		// The phisical directory in the server where the file will end up. If
 		// blank, CKFinder attempts to resolve BaseUrl.
@@ -64,8 +64,8 @@
 		}
 		Thumbnails.Enabled = true;
 		Thumbnails.DirectAccess = false;
-		Thumbnails.MaxWidth = 200;
-        Thumbnails.MaxHeight = 200;
+		Thumbnails.MaxWidth = 100;
+		Thumbnails.MaxHeight = 100;
 		Thumbnails.Quality = 80;
 
 		// Set the maximum size of uploaded images. If an uploaded image is
@@ -163,26 +163,26 @@
 
 		ResourceType type;
 
-		type = ResourceType.Add( "Files" );
-		type.Url = BaseUrl + "files/";
-		type.Dir = BaseDir == "" ? "" : BaseDir + "files/";
-		type.MaxSize = 0;
-		type.AllowedExtensions = new string[] { "7z", "aiff", "asf", "avi", "bmp", "csv", "doc", "docx", "fla", "flv", "gif", "gz", "gzip", "jpeg", "jpg", "mid", "mov", "mp3", "mp4", "mpc", "mpeg", "mpg", "ods", "odt", "pdf", "png", "ppt", "pptx", "pxd", "qt", "ram", "rar", "rm", "rmi", "rmvb", "rtf", "sdc", "sitd", "swf", "sxc", "sxw", "tar", "tgz", "tif", "tiff", "txt", "vsd", "wav", "wma", "wmv", "xls", "xlsx", "zip" };
-		type.DeniedExtensions = new string[] { };
+        type = ResourceType.Add("Files");
+        type.Url = BaseUrl + "files/";
+        type.Dir = BaseDir == "" ? "" : BaseDir + "files/";
+        type.MaxSize = 0;
+        type.AllowedExtensions = new string[] { "7z", "aiff", "asf", "avi", "bmp", "csv", "doc", "docx", "fla", "flv", "gif", "gz", "gzip", "jpeg", "jpg", "mid", "mov", "mp3", "mp4", "mpc", "mpeg", "mpg", "ods", "odt", "pdf", "png", "ppt", "pptx", "pxd", "qt", "ram", "rar", "rm", "rmi", "rmvb", "rtf", "sdc", "sitd", "swf", "sxc", "sxw", "tar", "tgz", "tif", "tiff", "txt", "vsd", "wav", "wma", "wmv", "xls", "xlsx", "zip" };
+        type.DeniedExtensions = new string[] { };
 
-		type = ResourceType.Add( "Images" );
-		type.Url = BaseUrl + "images/";
-		type.Dir = BaseDir == "" ? "" : BaseDir + "images/";
-		type.MaxSize = 0;
-		type.AllowedExtensions = new string[] { "bmp", "gif", "jpeg", "jpg", "png" };
-		type.DeniedExtensions = new string[] { };
+        type = ResourceType.Add("Images");
+        type.Url = BaseUrl + "images/";
+        type.Dir = BaseDir == "" ? "" : BaseDir + "images/";
+        type.MaxSize = 0;
+        type.AllowedExtensions = new string[] { "bmp", "gif", "jpeg", "jpg", "png" };
+        type.DeniedExtensions = new string[] { };
 
-		type = ResourceType.Add( "Flash" );
-		type.Url = BaseUrl + "flash/";
-		type.Dir = BaseDir == "" ? "" : BaseDir + "flash/";
-		type.MaxSize = 0;
-		type.AllowedExtensions = new string[] { "swf", "flv" };
-		type.DeniedExtensions = new string[] { };
+        type = ResourceType.Add("Flash");
+        type.Url = BaseUrl + "flash/";
+        type.Dir = BaseDir == "" ? "" : BaseDir + "flash/";
+        type.MaxSize = 0;
+        type.AllowedExtensions = new string[] { "swf", "flv" };
+        type.DeniedExtensions = new string[] { };
 	}
 
 </script>

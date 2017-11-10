@@ -136,8 +136,8 @@ background-position: 0px -488px;
 height: 49px;
 line-height: 49px;
 }
- #Box_Hotline{ width:100%; height:50px; float:left; margin:5px 0px;border: 1px solid #F2E7D2;}
- #Box_Hotline a{
+.Box_Hotline{ width:100%; height:50px; float:left; margin:5px 0px;border: 1px solid #F2E7D2;}
+ .Box_Hotline a{
 	height: 49px;
 	line-height: 49px;;
 	color: #393939;
@@ -146,7 +146,7 @@ line-height: 49px;
 	padding-left: 58px; 
 	background:url(../iCon/icon.png) no-repeat scroll 0px -535px #fef3df
 }
-  #Box_Hotline a span{ font-size:16px; font-weight:bold; color:#ff0038}
+  .Box_Hotline a span{ font-size:16px; font-weight:bold; color:#ff0038}
 #Contents #LeftContent #Support { width:100%; height:auto; float:left; margin:5px 0px; background:#fef3df;border: 1px solid #F2E7D2;}
 #Contents #LeftContent #Support #Top_Support{ width:100%; height:40px; background:url(../iCon/icon.png) no-repeat scroll 0px -582px; float:left}
 #Contents #LeftContent #Support #Top_Support span{ line-height:40px; margin:auto 5px auto 58px; color:#393939}

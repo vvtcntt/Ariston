@@ -489,10 +489,7 @@ namespace Ariston.Controllers.Display
                 db.SaveChanges();
                 var kiemtra = db.tblGroupProducts.Where(p => p.ParentID == id).ToList();
                 if (kiemtra.Count > 0)
-                {
-
-
-                    GetLevel(id, 0);
+                {GetLevel(id, 0);
                 }
             }
             return View();

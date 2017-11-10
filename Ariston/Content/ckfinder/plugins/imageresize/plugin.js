@@ -29,7 +29,7 @@ CKFinder.addPlugin( 'imageresize', {
 		var regexExt = /^(.*)\.([^\.]+)$/,
 			regexFileName = /^(.*?)(?:_\d+x\d+)?\.([^\.]+)$/,
 			regexGetSize = /^\s*(\d+)(px)?\s*$/i,
-			regexGetSizeOrEmpty = /(^\s*(\d+)(px)?\s*$)|^$/i,
+			regexGetSiVINCOMrEmpty = /(^\s*(\d+)(px)?\s*$)|^$/i,
 			imageDimension = { width : 0, height : 0 },
 			file,
 			doc;
