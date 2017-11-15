@@ -102,38 +102,30 @@ namespace Ariston.Controllers.Display
                         chuoi.Append(" <div class=\"Box_Qua\">");
                         chuoi.Append(" <div class=\"Content_Boxqua\">");
                         chuoi.Append(" <div class=\"boxQua_Line\"><span>" + listProduct[j].Sale + "</span></div>");
-
                         chuoi.Append(" </div>");
                         chuoi.Append("  </div>");
                         chuoi.Append(" </div>");
-
                         chuoi.Append("  <div class=\"Box_Image\">");
                         chuoi.Append("  <div class=\"price\">");
-                        chuoi.Append(" <div class=\"box_PriceSale\">");
-                        chuoi.Append(" <small>");
+                        chuoi.Append("<div class=\"box_PriceSale\">");
+                        chuoi.Append("<small>");
                         chuoi.Append(listProduct[j].PriceSaleString);
-
-                        chuoi.Append("  </small>");
-                        chuoi.Append("  <span class=\"kmp\"></span>");
-                        chuoi.Append("   </div>");
-                        chuoi.Append("  <div class=\"box_Price\">");
-                        chuoi.Append(" <small>");
-                        chuoi.Append(" <span class=\"gny\"></span>");
+                        chuoi.Append("</small>");
+                        chuoi.Append("<span class=\"kmp\"></span>");
+                        chuoi.Append("</div>");
+                        chuoi.Append("<div class=\"box_Price\">");
+                        chuoi.Append("<small>");
+                        chuoi.Append("<span class=\"gny\"></span>");
                         chuoi.Append(listProduct[j].PriceString);
-
-                        chuoi.Append(" </small>");
-                        chuoi.Append(" </div>");
-                        chuoi.Append(" </div>");
+                        chuoi.Append("</small>");
+                        chuoi.Append("</div>");
+                        chuoi.Append("</div>");
                         chuoi.Append("<div class=\"img\">");
                         chuoi.Append("<a href=\"/Product/" + listProduct[j].Tag + "-" + listProduct[j].idCate + "-" + listProduct[j].id + ".aspx\" title=\"" + listProduct[j].Name + "\"><img src=\"" + listProduct[j].ImageLinkThumb + "\" alt=\"" + listProduct[j].Name + "\" /></a>");
                         chuoi.Append(" </div>");
-                        chuoi.Append("  </div>");
-
-                        chuoi.Append("  </div>");
-
-                        chuoi.Append("  </div>");
-
-
+                        chuoi.Append("</div>");
+                        chuoi.Append("</div>");
+                        chuoi.Append("</div>");
                     }
                     else
                     {
@@ -183,8 +175,6 @@ namespace Ariston.Controllers.Display
                 {
                     if (listProduct[j].Priority == true)
                     {
-
-
                         chuoi1.Append("  <div class=\"Tear_Pri\">");
                         chuoi1.Append("<h3><a href=\"/Product/" + listProduct[j].Tag + "-" + listProduct[j].idCate + "-" + listProduct[j].id + ".aspx\" title=\"" + listProduct[j].Name + "\">" + listProduct[j].Name + "</a></h3>");
                         chuoi1.Append("  <div class=\"Topsi\"></div>");
@@ -196,17 +186,14 @@ namespace Ariston.Controllers.Display
                         chuoi1.Append(" <div class=\"Box_Qua\">");
                         chuoi1.Append(" <div class=\"Content_Boxqua\">");
                         chuoi1.Append(" <div class=\"boxQua_Line\"><span>" + listProduct[j].Sale + "</span></div>");
-
                         chuoi1.Append(" </div>");
                         chuoi1.Append("  </div>");
                         chuoi1.Append(" </div>");
-
                         chuoi1.Append("  <div class=\"Box_Image\">");
                         chuoi1.Append("  <div class=\"price\">");
                         chuoi1.Append(" <div class=\"box_PriceSale\">");
                         chuoi1.Append(" <small>");
                         chuoi1.Append(listProduct[j].PriceSaleString);
-
                         chuoi1.Append("  </small>");
                         chuoi1.Append("  <span class=\"kmp\"></span>");
                         chuoi1.Append("   </div>");
@@ -214,18 +201,15 @@ namespace Ariston.Controllers.Display
                         chuoi1.Append(" <small>");
                         chuoi1.Append(" <span class=\"gny\"></span>");
                         chuoi1.Append(listProduct[j].PriceString);
-
-                        chuoi1.Append(" </small>");
-                        chuoi1.Append(" </div>");
-                        chuoi1.Append(" </div>");
+                        chuoi1.Append("</small>");
+                        chuoi1.Append("</div>");
+                        chuoi1.Append("</div>");
                         chuoi1.Append("<div class=\"img\">");
                         chuoi1.Append("<a href=\"/Product/" + listProduct[j].Tag + "-" + listProduct[j].idCate + "-" + listProduct[j].id + ".aspx\" title=\"" + listProduct[j].Name + "\"><img src=\"" + listProduct[j].ImageLinkThumb + "\" alt=\"" + listProduct[j].Name + "\" /></a>");
-                        chuoi1.Append(" </div>");
-                        chuoi1.Append("  </div>");
-
-                        chuoi1.Append("  </div>");
-
-                        chuoi1.Append("  </div>");
+                        chuoi1.Append("</div>");
+                        chuoi1.Append("</div>");
+                        chuoi1.Append("</div>");
+                        chuoi1.Append("</div>");
 
                     }
                     else

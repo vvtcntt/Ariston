@@ -457,4 +457,9 @@ background:url(../iCon/icon.png) no-repeat scroll 0px -255px transparent}
     width: 100% !important;
 }
  #page{ display:none}
- 
+.timeWorks{width:auto; height:auto; float:left; margin:0px; color:#333; border:1px dashed #a7a7a7; position:relative; border-radius:5px; padding:7px; background:url(../icon/clock.gif) no-repeat 7px center  scroll #fffef1; padding-left:60px;  }
+.timeWorks .tm1{ font-size:12px; margin:0px 5px; display:block; text-transform:uppercase; font-weight:bold;}
+.timeWorks .tm1 strong{color:#ff5501; font-size:22px; font-weight:bold}
+.timeWorks .tm2{ font-size:14px; margin:0px 5px; display:block; font-style:italic}
+.timeWorks .tm3{ font-size:14px; margin:0px 5px; display:block; color:#ff5501}
+.timeWorks .tm3 strong{color:#0080ec}

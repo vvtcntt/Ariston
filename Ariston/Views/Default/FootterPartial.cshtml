@@ -3,7 +3,6 @@
     @Html.Raw(ViewBag.resultUrl)
 </nav>
 <div id="Footer">
-
     <div id="Tops">
         <div id="Contents">
             <div class="Tear_2">
@@ -39,6 +38,13 @@
                 <a class="dkbct" href="http://www.online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=7279" rel="nofollow"><img src="~/Content/Display/iCon/btc.jpg" alt="Đăng ký bộ công thương" /></a>
             </div>
             <div class="Tear_3">
+                <div class="timeWorks" style="margin-bottom:10px">
+                    <span class="tm1">Thời gian làm việc : <strong>8H00 - 21H15</strong> </span>
+                    <span class="tm2">Làm việc tất cả các ngày trong tuần</span>
+                    <span class="tm3">
+                        Khách hàng mua hàng từ <strong>18H00 - 21H15</strong> cần đặt lịch trước qua số hotline : <strong>1900 63 66 95</strong>
+                    </span>
+                </div>
                 <h4>Hỗ trợ khách hàng</h4>
                 <div class="Box_Hotline">
                     <a href="#" title="giờ hành chính"><span>@Model.HotlineIN</span></a>
@@ -52,10 +58,6 @@
                     <a href="#" title="giờ hành chính"><span>@Model.MobileOUT</span></a>
                 </div>
                 <div class="Clear"></div>
-                <h4 style="margin-top:3px">Bản đồ chỉ đường</h4>
-                <div id="Box_Maps">
-                    @Html.Raw(ViewBag.maps)
-                </div>
             </div>
             <div class="Clear"></div>
         </div>
