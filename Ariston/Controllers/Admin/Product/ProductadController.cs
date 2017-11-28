@@ -842,6 +842,7 @@ namespace Ariston.Controllers.Admin.Product
                     string capacity = collection["rdcap"];
                     if (capacity != null && capacity != "")
                         tblproduct.Capacity = int.Parse(capacity);
+                    tblproduct.Info = collection["Info"];
                     tblproduct.ImageSale = ImageSale;
                     tblproduct.Description = Description;
                     tblproduct.ProductSale = ProductSale;
