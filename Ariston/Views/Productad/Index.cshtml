@@ -118,7 +118,9 @@
         var chkPri;
         if ($j(".chkPri:checked").is(':checked')) { chkPri = 'true'; }
         else { chkPri = 'false'; }
-
+      var chkPriority;
+          if ($j(linkUpdateId).closest('tr').children(".Priority").children("#chkPriority:checked").is(':checked')) { chkPriority = 'true'; }
+          else { chkPriority = 'false'; }
         if (price < salePrice) { alert("Giá khuyến mãi phải nhỏ hơn giá bán !"); return false; }
         var querystring = "{'code':'" + code + "'," +
                             "'productid':'" + id + "'," +
@@ -127,7 +129,9 @@
                             "'ordernumber':'" + orderNumber + "'," +
                             "'cbIsActive':'" + cbIsActive + "'," +
                              "'chkHome':'" + chkHome + "'," +
-                             "'chkSale':'" + chkSale + "'," +
+            "'chkSale':'" + chkSale + "'," +
+                                     "'chkPriority':'" + chkPriority + "'," +
+
                               "'chkPri':'" + chkPri + "'," +
                             "'code':'" + code + "'," +
                            "'Status':'" + status + "'," +

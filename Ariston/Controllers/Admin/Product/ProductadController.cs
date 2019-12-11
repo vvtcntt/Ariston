@@ -224,7 +224,7 @@ namespace Ariston.Controllers.Admin.Product
 
             return PartialView(listProduct.ToPagedList(pageNumber, pageSize));
         }
-        public ActionResult UpdateInfoProduct(string code,string productid,string chkPri, string price, string saleprice, string cbIsActive, string chkHome, string chkSale, string ordernumber, string idCate, string Status)
+        public ActionResult UpdateInfoProduct(string code,string productid,string chkPri, string price, string saleprice, string cbIsActive, string chkHome, string chkSale, string chkPriority, string ordernumber, string idCate, string Status)
         {
             if (ClsCheckRole.CheckQuyen(4, 2, int.Parse(Request.Cookies["Username"].Values["UserID"])) == true)
             {
@@ -235,7 +235,8 @@ namespace Ariston.Controllers.Admin.Product
                 Product.PriceSale = int.Parse(saleprice);
                 Product.PriceSaleString = StringClass.UpdatePriceSale(saleprice);
                 Product.PriceString = StringClass.UpdatePrice(price);
-                Product.Code = code;
+                Product.Code = code; Product.Priority = bool.Parse(chkPriority);
+
                 Product.ViewHomes = bool.Parse(chkHome);
                 Product.Active = bool.Parse(cbIsActive);
                 Product.ProductSale = bool.Parse(chkSale);

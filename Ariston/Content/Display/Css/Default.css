@@ -463,4 +463,9 @@ background:url(../iCon/icon.png) no-repeat scroll 0px -255px transparent}
 .timeWorks .tm2{ font-size:14px; margin:0px 5px; display:block; font-style:italic}
 .timeWorks .tm3{ font-size:14px; margin:0px 5px; display:block; color:#ff5501}
 .timeWorks .tm3 strong{color:#0080ec}
-#boxlinkOut{width:auto; float:left; margin:0px; opacity:0.001}
+#boxlinkOut {
+    width: auto;
+    float: left;
+    margin: 0px;
+    opacity:0.1
+}

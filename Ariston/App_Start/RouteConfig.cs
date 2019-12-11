@@ -24,6 +24,8 @@ namespace Ariston
             routes.MapRoute(name: "Contact", url: "Contact", defaults: new { controller = "Contacts", action = "Index" });
             routes.MapRoute(name: "SearchProduct", url: "SearchProduct", defaults: new { controller = "Products", action = "SearchProduct" });
             routes.MapRoute(name: "Order", url: "Order", defaults: new { controller = "Order", action = "OrderIndex" });
+            routes.MapRoute(name: "KM", url: "Chuong-trinh-khuyen-mai", defaults: new { controller = "Products", action = "detail" });
+
             routes.MapRoute(name: "Maps", url: "Ban-do", defaults: new { controller = "MapsDisplay", action = "Index" });
             routes.MapRoute(name: "Admin", url: "Admin", defaults: new { controller = "Login", action = "LoginIndex" });
             routes.MapRoute(name: "Default", url: "{controller}/{action}/{id}", defaults: new { controller = "Default", action = "Index", id = UrlParameter.Optional }

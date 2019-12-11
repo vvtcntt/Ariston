@@ -1,27 +1,10 @@
 ﻿@model Ariston.Models.tblConfig
 <div id="Box_Hotline">
-    @if (int.Parse(DateTime.Now.Hour.ToString()) > 0 && int.Parse(DateTime.Now.Hour.ToString()) < 7)
-    {
-        <a href="#" title="thời gian làm"><span style="font-size: 13px; font-weight: normal">Chưa làm việc</span></a>
-
-    }
-    else if (int.Parse(DateTime.Now.Hour.ToString()) >= 7 && int.Parse(DateTime.Now.Hour.ToString()) < 19)
-    {
-
-        <a href="#" title="giờ hành chính"><span>@Model.HotlineIN</span></a>
-    }
 
 
-    else if (int.Parse(DateTime.Now.Hour.ToString()) >= 19 && int.Parse(DateTime.Now.Hour.ToString()) < 22)
-    {
-        <a href="#" title="ngoià giờ hành chính"> <span>@Model.HotlineOUT</span></a>
-
-    }
-    else if (int.Parse(DateTime.Now.Hour.ToString()) >= 22 && int.Parse(DateTime.Now.Hour.ToString()) < 25)
-    {
-        <a href="#" title="Hết giờ"><span style="font-size: 13px; font-weight: normal">Hết giờ làm việc</span></a>
-    }
-   
+        <a href="#" title="giờ hành chính">Cơ sở 1 : <span>@Model.Hotline1</span></a>
+    
+        <a href="#" title="giờ hành chính">Cơ sở 2 : <span>@Model.Hotline2</span></a>
 </div>
 @Html.Raw(ViewBag.chuoi)
  

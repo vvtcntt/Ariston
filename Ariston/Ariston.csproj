@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -1355,6 +1356,13 @@
     <Content Include="Content\Display\Css\Product_Res.css" />
     <Content Include="Content\Display\Css\style.css" />
     <Content Include="Content\Display\Css\styles.css" />
+    <Content Include="Content\Display\Css\update\call.css" />
+    <Content Include="Content\Display\Css\update\owl.carousel.min.css" />
+    <Content Include="Content\Display\Css\update\owl.theme.default.min.css" />
+    <Content Include="Content\Display\Css\update\Popup_ud.css" />
+    <Content Include="Content\Display\Css\update\product.css" />
+    <Content Include="Content\Display\Css\update\sale.css" />
+    <Content Include="Content\Display\Css\update\times.css" />
     <Content Include="Content\Display\Default.html" />
     <Content Include="Content\Display\iCon\arrows.png" />
     <Content Include="Content\Display\iCon\bg-navi-pro.jpg" />
@@ -1412,6 +1420,13 @@
     <Content Include="Content\Display\iCon\Slide_Ariston_2.png" />
     <Content Include="Content\Display\iCon\Slide_Ariston_3.png" />
     <Content Include="Content\Display\iCon\switch_lingue.png" />
+    <Content Include="Content\Display\iCon\update\bon-cau-inax-icon.png" />
+    <Content Include="Content\Display\iCon\update\calling.gif" />
+    <Content Include="Content\Display\iCon\update\facebook-icon.jpg" />
+    <Content Include="Content\Display\iCon\update\hinhtron.png" />
+    <Content Include="Content\Display\iCon\update\icon-zalo.png" />
+    <Content Include="Content\Display\iCon\update\KM-con.gif" />
+    <Content Include="Content\Display\iCon\update\youtube.png" />
     <Content Include="Content\Display\ListNews.html" />
     <Content Include="Content\Display\News_Detail.html" />
     <Content Include="Content\Display\Order.html" />
@@ -1421,6 +1436,9 @@
     <Content Include="Content\Display\Script\jquery.mmenu.min.all.js" />
     <Content Include="Content\Display\Script\jquery.nivo.slider.pack.js" />
     <Content Include="Content\Display\Script\pgwslideshow.min.js" />
+    <Content Include="Content\Display\Script\update\jquery.popupMiendatweb.min.js" />
+    <Content Include="Content\Display\Script\update\owl.carousel.min.js" />
+    <Content Include="Content\Display\Script\update\script.js" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -1672,6 +1690,8 @@
     <Content Include="Views\address\Index.cshtml" />
     <Content Include="Views\address\ProductAddress.cshtml" />
     <Content Include="Views\address\UpdateProductAddress.cshtml" />
+    <Content Include="Views\Default\callPartial.cshtml" />
+    <Content Include="Views\Products\detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

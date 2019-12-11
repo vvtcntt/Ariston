@@ -8,17 +8,21 @@
             <div class="Tear_2">
                 <h4>Trụ sở chính</h4>
                 <span class="Name_Company">@Model.Name</span>
-                <span class="Address_Company">Địa chỉ : @Model.Address</span>
-                <span class="Mobile_Company">Điện thoại :@Model.MobileIN - Hotline : @Model.HotlineIN</span>
-                <span class="Mobile_Company">Tổng đài bán hàng :@Model.HotlineOUT - Bảo hành : @Model.MobileOUT</span>
+                <span class="Address_Company">Cơ sở 1 : @Model.Address1</span>
+                <span class="Mobile_Company">Điện thoại :@Model.Mobile1 - Hotline:@Model.Hotline1</span>
+
+                <span class="Address_Company">Cơ sở 2 :@Model.Address2</span>
+                <span class="Mobile_Company">Điện thoại :@Model.Mobile1 - Hotline : @Model.Hotline2</span>
+                <span class="Mobile_Company">Tổng đài Bán hàng :@Model.Hotline2 - Tổng đài Bảo hành : @Model.Mobile2</span>
+
                 <span class="Email_Company">Email : @Model.Email</span>
                 <h4>Hải Phòng</h4>
                 <span class="Address_Company">Địa chỉ : 554B Nguyễn Văn Linh-Vĩnh Niệm-Lê Chân-HP</span>
                 <span class="Mobile_Company">Điện thoại : 0313 870 327 - 0904 151 746</span>
                 <span class="Email_Company">Email : Phamducvinh_sonha@yahoo.com.vn</span>
                 <h4>TP.Hồ Chí Minh</h4>
-                <span class="Address_Company">Địa chỉ : Ấp Tam Đông 2, xã Thới Tam Thôn, Hóc Môn, TP.HCM.</span>
-                <span class="Mobile_Company">Điện thoại : 08.3602 1397 - 0932 169 727.</span>
+                <span class="Address_Company">Địa chỉ : Số 639 Nguyễn Thị Thử, Ấp 2, Xuân Thới Sơn, Hóc Môn, TPHCM.</span>
+                <span class="Mobile_Company">Điện thoại : 028.3710 1349 - 0903 737277.</span>
                 <span class="Email_Company">Email : Seabig.vn@gmail.com</span>
             </div>
             <div class="Tear_4">
@@ -45,17 +49,21 @@
                         Khách hàng mua hàng ngoài <strong>19H30</strong> cần đặt lịch trước qua số hotline : <strong>1900 63 66 95</strong>
                     </span>
                 </div>
-                <h4>Hỗ trợ khách hàng</h4>
+                <h4>391 Nguyễn Xiển</h4>
                 <div class="Box_Hotline">
-                    <a href="#" title="giờ hành chính"><span>@Model.HotlineIN</span></a>
+                    <a href="#" title="giờ hành chính"><span>@Model.Hotline1</span></a>
+                </div>
+                <h4>170 Phạm Văn Đồng</h4>
+                <div class="Box_Hotline">
+                    <a href="#" title="giờ hành chính"><span>@Model.Hotline2</span></a>
                 </div>
                 <h4>Tổng đài bán hàng</h4>
                 <div class="Box_Hotline">
-                    <a href="#" title="giờ hành chính"><span>@Model.HotlineOUT</span></a>
+                    <a href="#" title="giờ hành chính"><span>@Model.PbxSell</span></a>
                 </div>
                 <h4>Tổng đài CSKH - Bảo hành</h4>
                 <div class="Box_Hotline">
-                    <a href="#" title="giờ hành chính"><span>@Model.MobileOUT</span></a>
+                    <a href="#" title="giờ hành chính"><span>@Model.PbxGua</span></a>
                 </div>
                 <div class="Clear"></div>
             </div>
@@ -67,7 +75,13 @@
             <div class="Clear"></div>
         </div>
     </div>
+    <div class="Clear"></div>
+    <div id="channel">
+        <span>Đăng ký và theo dõi sản phẩm trên</span>
 
+        <ul><li><a href="@Model.FanpageYoutube" title="youtube"><img src="~/Content/Display/iCon/update/youtube.png" title="youtube" /></a></li><li><a href="@Model.FanpageYoutube" title="facebook"><img src="~/Content/Display/iCon/update/facebook-icon.jpg" title="facebook" /></a></li></ul>
+    </div>
+    <div class="Clear"></div>
     <div class="Clear"></div>
     <div id="Bottom">
         <div id="Content">
@@ -116,7 +130,8 @@ else
                 localStorage.setItem("Tat_quangcao", (new Date).getTime())
             } catch (e) { console.log(e); }
         }
-    </script>
+
+/**/</script>
     <style>
         #adwfooter {
             width: 100%;
@@ -178,4 +193,4 @@ else
             </div>
         </div>
     }
-}
+}@{ Html.RenderAction("callPartial", "Default");}

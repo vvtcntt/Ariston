@@ -19,12 +19,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="~/Content/Display/iCon/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="~/Content/Display/Css/Popup.css" rel="stylesheet" />
-            @Styles.Render("~/Content/Display/Css/Style")
-            <link href="~/Content/Display/Css/jquery.mmenu.all.css" rel="stylesheet" />
-        <link href="~/Content/Display/Css/Order1.css" rel="stylesheet" />
+    @Styles.Render("~/Content/Display/Css/Style")
+    <link href="~/Content/Display/Css/update/call.css" rel="stylesheet" />
+     <link href="~/Content/Display/Css/update/Popup_ud.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/update/product.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/update/sale.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/update/times.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/jquery.mmenu.all.css" rel="stylesheet" />
+    <link href="~/Content/Display/Css/Order1.css" rel="stylesheet" />
     <link href="~/Content/Display/Css/Order1_Res.css" rel="stylesheet" />
-     <script src="~/Scripts/jquery.min.js"></script>
-     <script src="~/Content/Display/Script/jquery-1.9.0.min.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Content/Display/Script/jquery-1.9.0.min.js"></script>
     <script src="~/Content/Display/Script/pgwslideshow.min.js"></script>
     <script src="~/Scripts/jquery.mmenu.min.all.js"></script>
     <script src="~/Scripts/jquery.popupMiendatweb.min.js"></script>
@@ -33,15 +38,15 @@
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date(); a = s.createElement(o),
-  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-27277318-6', 'binhnuocnonglanhariston.vn');
         ga('send', 'pageview');
 
     </script>
- 
-     <script type="text/javascript">
+
+    <script type="text/javascript">
         $(function () {
             $('nav#menu').mmenu({
                 extensions: ['effect-slide', 'pageshadow'],
@@ -55,7 +60,7 @@
             });
         });
     </script>
-   
+
 
 </head>
 <body>
@@ -86,7 +91,7 @@
 
         function resizeFacebookComments() {
             var src = $('.fb-comments iframe').attr('src').split('width='),
-            width = $(".fb-comments").parent().width();
+                width = $(".fb-comments").parent().width();
 
             $('.fb-comments iframe').attr('src', src[0] + 'width=' + width);
         }
@@ -94,7 +99,7 @@
     <script type="text/javascript">
         $(window).load(function () {
             $('#slider').nivoSlider();
-           
+
         });
     </script>
     <script>
@@ -146,16 +151,16 @@
 
 
     </div>
-     <script type="text/javascript">
+    <script type="text/javascript">
 
         function CreateOrder(id) {
             var quanlity = 1;
             $.post("/Order/Create", { "idp": id, "ord": quanlity },
-               function (data) {
-                   $("#popup_content").html(data.result);
-                   $("#Order_Toolbars a.icon span").html(data.sl);
-                   $("#List_OrderToolbar #dat").html(data.chuoi1)
-               });
+                function (data) {
+                    $("#popup_content").html(data.result);
+                    $("#Order_Toolbars a.icon span").html(data.sl);
+                    $("#List_OrderToolbar #dat").html(data.chuoi1)
+                });
 
             return false;
         }
@@ -164,27 +169,27 @@
             var ord = $(".txtOrd" + pId).val();
 
             $.post("/Order/UpdatOder", { "id": pId, "ord": ord },
-               function (data) {
-                   $('#Gia' + pId).html(data.gia + " vnd");
-                   $(".tt").html(data.tt);
-                   htgh
-                   $(".htgh").html("Có " + data.sl + " sản phẩm");
+                function (data) {
+                    $('#Gia' + pId).html(data.gia + " vnd");
+                    $(".tt").html(data.tt);
+                    htgh
+                    $(".htgh").html("Có " + data.sl + " sản phẩm");
 
-               });
+                });
             return false;
         }
         function DeleteOrder(pId) {
             $.post("/Order/DeleteOrder", { "id": pId },
-               function (data) {
+                function (data) {
 
-                   $('.row' + pId).html(data.thongtin);
-                   $(".tt").html(data.tt);
-                   $(".count").html(data.count);
-                   $("#Order_Toolbars a.icon span").html(data.sl);
-                   $("#List_OrderToolbar #dat").html(data.chuoi1)
+                    $('.row' + pId).html(data.thongtin);
+                    $(".tt").html(data.tt);
+                    $(".count").html(data.count);
+                    $("#Order_Toolbars a.icon span").html(data.sl);
+                    $("#List_OrderToolbar #dat").html(data.chuoi1)
 
 
-               });
+                });
             return false;
         }
 
@@ -216,5 +221,33 @@
 
         }
     </script>
+    <script src="~/Content/Display/Script/update/jquery.popupMiendatweb.min.js"></script>
+    <script type="text/javascript" language="JavaScript">
+        $(function () {
+            /* khởi tạo popup */
+            $('input[rel*=miendatwebPopup]').showPopup({
+                top: 200, //khoảng cách popup cách so với phía trên
+                closeButton: ".close_popup", //khai báo nút close cho popup
+                scroll: false, //cho phép scroll khi mở popup, mặc định là không cho phép
+                onClose: function () {
+                    //sự kiện cho phép gọi sau khi đóng popup, cho phép chúng ta gọi 1 số sự kiện khi đóng popup, bạn có thể để null ở đây
+                }
+            });
+            $('a[rel*=miendatwebPopup]').showPopup({
+                top: 200, //khoảng cách popup cách so với phía trên
+                closeButton: ".close_popup", //khai báo nút close cho popup
+                scroll: false, //cho phép scroll khi mở popup, mặc định là không cho phép
+                onClose: function () {
+                    //sự kiện cho phép gọi sau khi đóng popup, cho phép chúng ta gọi 1 số sự kiện khi đóng popup, bạn có thể để null ở đây
+                }
+            });
+        });
+        function close_popup() {
+            $("#popup_content").css("display", "none");
+            $("#lean_overlay").css("display", "none");
+
+        }
+    </script>
+
 </body>
 </html>

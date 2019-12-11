@@ -237,6 +237,10 @@ namespace Ariston.Controllers.Display
             ViewBag.chuoi = chuoi; ViewBag.chuoi1 = chuoi1;
                 return View();
         }
+        public PartialViewResult callPartial()
+        {
+            return PartialView(db.tblConfigs.First());
+        }
         public PartialViewResult SlidePartial()
         {
             var listSlide = db.tblImages.Where(p => p.idCate == 1 && p.Active == true).OrderBy(p => p.Ord).Take(5).ToList();
